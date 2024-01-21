@@ -1,0 +1,21 @@
+<app-welcome></app-welcome>
+<div class="my-6">
+    <input
+        id="message"
+        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-100 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Write your thoughts here..."
+        [(ngModel)]="inputValue"
+        (keydown.enter)="addTask()"
+    />
+</div>
+<div class="my-6">
+    <h3 class="block font-sans font-bold text-2xl">All Task List</h3>
+    <div class="flex flex-col gap-2 mt-3">
+        <app-list
+            [tasks]="tasks"
+            (completed)="onCompleted($event)"
+            (important)="onImportant($event)"
+            (delete)="onDelete($event)"
+        ></app-list>
+    </div>
+</div>

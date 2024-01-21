@@ -1,0 +1,29 @@
+<aside class="w-1/4 bg-gray-100 h-screen fixed">
+    <ul class="grid grid-flow-row gap-1">
+        <li
+            class="bg-white border-l-4 cursor-pointer border-bgray-200 text-gray-600 p-4 block font-sans font-bold w-full hover:text-gray-700 hover:bg-gray-200"
+            [routerLink]="'/'"
+            routerLinkActive="bg-red-500   border-indigo-500 text-indigo-600"
+            [routerLinkActiveOptions]="{ exact: true }"
+            ariaCurrentWhenActive="page"
+        >
+            All
+        </li>
+        <li
+            class="bg-white border-l-4 cursor-pointer border-bgray-200 text-gray-600 p-4 block font-sans font-bold w-full hover:text-gray-700 hover:bg-gray-200"
+            [routerLink]="'/important-task'"
+            routerLinkActive="border-l-4 border-indigo-500 text-indigo-600"
+            ariaCurrentWhenActive="page"
+        >
+            Important
+        </li>
+        <li
+            class="bg-white border-l-4 border-bgray-200 cursor-pointer p-4 block font-sans font-bold text-gray-600 w-full hover:text-gray-700 hover:bg-gray-200"
+            [routerLink]="'/completed-task'"
+            routerLinkActive="border-l-4 border-indigo-500 text-indigo-600"
+            ariaCurrentWhenActive="page"
+        >
+            Completed
+        </li>
+    </ul>
+</aside>

@@ -1,0 +1,13 @@
+<app-welcome></app-welcome>
+
+<div class="my-6">
+    <h3 class="block font-sans font-bold text-2xl">All Important Task List</h3>
+    <div class="flex flex-col gap-2 mt-3">
+        <app-list
+            [tasks]="tasks"
+            (completed)="onCompleted($event)"
+            (important)="onImportant($event)"
+            (delete)="onDelete($event)"
+        ></app-list>
+    </div>
+</div>
